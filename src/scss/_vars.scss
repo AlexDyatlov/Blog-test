@@ -1,0 +1,12 @@
+$color-bg: #231F20;
+$color-text: #F7941E;
+
+@mixin f400 {
+  font-family: 'Gilroy-Regular';
+  font-weight: 400;
+}
+
+@mixin f700 {
+  font-family: 'Gilroy-Bold';
+  font-weight: 700;
+}

@@ -40,3 +40,17 @@ button:focus,
 input:focus {
   outline: transparent;
 }
+
+body{
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  @include f400;
+  
+}
+
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}

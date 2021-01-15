@@ -1,1 +1,19 @@
 @import 'local-fonts';
+
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('../fonts//Gilroy-Regular.woff2') format('woff2'),
+    url('../fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: 400;
+  font-size: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('../fonts//Gilroy-Bold.woff2') format('woff2'),
+    url('../fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: 700;
+  font-size: normal;
+  font-display: swap;
+}
