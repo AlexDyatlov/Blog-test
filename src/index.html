@@ -4,7 +4,9 @@
 
 <body>
   @@include('components/_header.html')
-
+  <div class="wrapper">
+    <div></div>
+  </div>
   <main class="blog">
     <div class="container">
       <h1 class="blog__title">
@@ -14,7 +16,7 @@
         “Try our blog to find the best tips and tricks to select your gift”
       </p>
       <div class="blog__main">
-        <a class="blog__main-img" href="#">
+        <a class="blog__main-photo" href="#">
           <img src="images/photo.jpg" alt="Wedding photo">
         </a>
         <div class="blog__info">
@@ -30,22 +32,24 @@
           <h2 class="blog__item-title">
             Database to find the gifts for your girlfriend
           </h2>
+          <input type="checkbox" class="read-more-state" id="post-first" />
           <p class="blog__item-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore... <span class="blog__item-more">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem itaque ducimus unde harum vitae quam provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente odit laborum tempore sed quaerat a aliquam? Corrupti dolorum, tempora iste qui modi consectetur explicabo quia vel reiciendis nesciunt? Id!</span>
           </p>
-          <a class="blog__item-link" href="#">Read More</a>
+          <label for="post-first" class="blog__item-toggle"></label>
         </div>
         <div class="blog__item">
           <h2 class="blog__item-title">
             Database to find the gifts for your girlfriend
           </h2>
+          <input type="checkbox" class="read-more-state" id="post-second" />
           <p class="blog__item-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore... <span class="blog__item-more">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem itaque ducimus unde harum vitae quam provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sapiente odit laborum tempo!</span>
           </p>
-          <a class="blog__item-link" href="#">Read More</a>
+          <label for="post-second" class="blog__item-toggle"></label>
         </div>
       </div>
-      <button class="blog-btn">SHOW MORE</button>
+      <button id="but" class="blog-btn">SHOW MORE</button>
     </div>
   </main>
 

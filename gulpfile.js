@@ -14,7 +14,7 @@ let gulp = require("gulp"),
 	rename = require("gulp-rename"), //переименовывает файлы, добавляет им префиксы и суффиксы
 	imagemin = require("gulp-imagemin"), //пережимает изображения
 	recompress = require("imagemin-jpeg-recompress"), //тоже пережимает, но лучше. Плагин для плагина
-	uglify = require("gulp-uglify"), //то же, что cssmin, только для js
+	uglify = require('gulp-uglify-es').default,
 	concat = require("gulp-concat"), //склеивает css и js-файлы в один
 	del = require("del"), //удаляет указанные файлы и директории. Нужен для очистки перед билдом
 	ttf2woff = require("gulp-ttf2woff"), //конвертирует шрифты в веб-формат
@@ -111,7 +111,9 @@ gulp.task("script", function () {
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
-		.pipe(babel())
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
 		.pipe(concat("libs.min.js"))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
@@ -124,13 +126,6 @@ gulp.task("minjs", function () {
 	return gulp
 		.src("src/js/main.js")
 		.pipe(size())
-		.pipe(babel({
-			presets: [
-				['@babel/env', {
-					modules: false
-				}]
-			]
-		}))
 		.pipe(uglify())
 		.pipe(
 			rename({
